@@ -1,0 +1,118 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "e1cb0974-546c-49fa-bc1b-72181b32a4a3": {
+        "id": "e1cb0974-546c-49fa-bc1b-72181b32a4a3",
+        "parent": null,
+        "name": "mine",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "b844a6ba-13d7-4cfc-953f-8bfed88cd779",
+          "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf",
+          "0dcd3dc7-5400-4eea-88d0-0442b5178e07"
+        ],
+        "isRemovable": false,
+        "filePath": "mine"
+      },
+      "b844a6ba-13d7-4cfc-953f-8bfed88cd779": {
+        "id": "b844a6ba-13d7-4cfc-953f-8bfed88cd779",
+        "parent": "e1cb0974-546c-49fa-bc1b-72181b32a4a3",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "mine/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf": {
+        "id": "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf",
+        "parent": "e1cb0974-546c-49fa-bc1b-72181b32a4a3",
+        "name": "testPython.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "mine/testPython.py",
+        "code": "def handler(event, context):\n    \n    return {\"message\": \"Successfully executed\"}\n",
+        "config": {
+          "runtime": "python3.6",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "0dcd3dc7-5400-4eea-88d0-0442b5178e07": {
+        "id": "0dcd3dc7-5400-4eea-88d0-0442b5178e07",
+        "parent": "e1cb0974-546c-49fa-bc1b-72181b32a4a3",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "mine/__init__.py",
+        "code": ""
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "e1cb0974-546c-49fa-bc1b-72181b32a4a3",
+    "openFiles": [
+      "b844a6ba-13d7-4cfc-953f-8bfed88cd779",
+      "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf"
+    ],
+    "currentFileId": "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/mine",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "mine",
+    "projectDescription": "desc",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1565733115115
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "mine",
+      "url": "https://github.com/nivitzhaky/test-sigma-python"
+    }
+  }
+}
