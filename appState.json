@@ -51,7 +51,12 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": []
+        "triggers": [
+          {
+            "resourceName": "apigusEast1testtestget",
+            "config": {}
+          }
+        ]
       },
       "0dcd3dc7-5400-4eea-88d0-0442b5178e07": {
         "id": "0dcd3dc7-5400-4eea-88d0-0442b5178e07",
@@ -72,7 +77,27 @@
       "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf"
     ],
     "currentFileId": "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf",
-    "resources": {},
+    "resources": {
+      "apigusEast1testtestget": {
+        "name": "apigusEast1testtestget",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "test",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "test",
+          "resourcePath": "/test",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": true,
+          "stageMode": 0,
+          "stageName": "prod",
+          "mode": 0
+        }
+      }
+    },
     "customTemplate": {
       "dialect": null,
       "definitions": {}
@@ -106,7 +131,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1565733115115
+    "lastSave": 1565733333731
   },
   "VCS_STATE": {
     "provider": "GitHub",
