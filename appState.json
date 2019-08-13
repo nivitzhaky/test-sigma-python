@@ -43,7 +43,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "mine/testPython.py",
-        "code": "def handler(event, context):\n    \n    return {\"message\": \"Successfully executed\"}\n",
+        "code": "import boto3\nddb = boto3.client(\"dynamodb\")\n\ndef handler(event, context):\n    data = []\n    try:\n        data = ddb.get_item(\n            TableName='test',\n            Key={'my':{'S':'my'}}\n        )\n    except BaseException as e:\n        print(e)\n        raise(e)\n    \n    return data\n    try:\n        data = ddb.put_item(\n            TableName='test',\n            Item={'att':{'S':'val'},'my':{'S':'my'}}\n        )\n    except BaseException as e:\n        print(e)\n        raise(e)\n",
         "config": {
           "runtime": "python3.6",
           "handler": "handler",
@@ -96,6 +96,39 @@
           "stageName": "prod",
           "mode": 0
         }
+      },
+      "ddbtest": {
+        "name": "ddbtest",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 0,
+          "operation": "get",
+          "table": {
+            "arn": "",
+            "name": "test",
+            "partitionKey": "my",
+            "partitionKeyType": "S",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "S",
+            "payPerRequest": true,
+            "mode": 0
+          },
+          "isGlobalEditMode": false,
+          "parameters": {
+            "Key": {
+              "my": "my"
+            },
+            "Item": {},
+            "ExpressionAttributeValues": {}
+          },
+          "triggerParams": {},
+          "validator": {
+            "validatableFields": {},
+            "validity": true
+          },
+          "valid": true
+        }
       }
     },
     "customTemplate": {
@@ -121,7 +154,15 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "boto3": {
+          "name": "boto3",
+          "language": "python",
+          "version": "1.9.6",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -131,7 +172,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1565733333731
+    "lastSave": 1565734268127
   },
   "VCS_STATE": {
     "provider": "GitHub",
