@@ -32,7 +32,12 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": []
+        "triggers": [
+          {
+            "resourceName": "apigusEast1testjslambdajsany",
+            "config": {}
+          }
+        ]
       },
       "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf": {
         "id": "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf",
@@ -129,6 +134,25 @@
           },
           "valid": true
         }
+      },
+      "apigusEast1testjslambdajsany": {
+        "name": "apigusEast1testjslambdajsany",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "testjs",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "lambdajs",
+          "resourcePath": "/lambdajs",
+          "restMethod": "ANY",
+          "proxyIntegration": false,
+          "enableCORS": true,
+          "stageMode": 0,
+          "stageName": "Prod",
+          "mode": 0
+        }
       }
     },
     "customTemplate": {
@@ -177,7 +201,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1565798820638
+    "lastSave": 1565798910239
   },
   "VCS_STATE": {
     "provider": "GitHub",
