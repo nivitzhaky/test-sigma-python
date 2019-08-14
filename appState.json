@@ -24,7 +24,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "mine/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "code": "const {WebhookClient, Suggestion} = require('dialogflow-fulfillment');\n\nexports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -76,7 +76,7 @@
       "b844a6ba-13d7-4cfc-953f-8bfed88cd779",
       "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf"
     ],
-    "currentFileId": "9bdaaed2-a2f0-4146-9c6e-0e77338f58bf",
+    "currentFileId": "b844a6ba-13d7-4cfc-953f-8bfed88cd779",
     "resources": {
       "apigusEast1testtestget": {
         "name": "apigusEast1testtestget",
@@ -161,6 +161,11 @@
           "version": "1.9.6",
           "dev": true,
           "notRemovable": false
+        },
+        "dialogflow-fulfillment": {
+          "name": "dialogflow-fulfillment",
+          "version": "0.6.1",
+          "language": "javascript"
         }
       }
     }
@@ -172,7 +177,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1565734268127
+    "lastSave": 1565797211009
   },
   "VCS_STATE": {
     "provider": "GitHub",
